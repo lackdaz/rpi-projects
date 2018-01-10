@@ -8,11 +8,15 @@ SSH allows to access your rpi remotely and a larger convenience of not having to
 
 ### Setup
 #### (with MacOSX)
-1. Go to terminal and type:
+1. Go to terminal(rpi) and type:
 
       `ifconfig`
 
-      note the `inet` address
+      note the `inet` address, or
+
+      `ping raspberrypi.local`
+
+      on terminal(MacOSX) if you are on the same network
 2. Access the raspi config GUI by:
 
       `sudo raspi-config`
