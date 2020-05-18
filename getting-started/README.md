@@ -44,6 +44,8 @@ To start off:
 
 If all goes well, Raspbian would be installed and you can now start hacking away with your Raspberry Pi!
 
+9. Check how much space you have left with `df -h`
+
 Here are some super useful utilities that I install with my mint Raspbian:
 
 1. matchbox-keyboard - an on-screen keyboard that allows you to type using your mouse. Tends to double tap with some mice so be careful.
@@ -51,3 +53,21 @@ Here are some super useful utilities that I install with my mint Raspbian:
 2. x-screensaver - disable that annoying screen blanking after 15 mins.
 
 3. git
+
+## Static IP Address
+1. `sudo vi /etc/dhcpcd.conf`, paste the following after the # example and save the file.
+    ```
+    interface eth0
+
+    static ip_address=192.168.0.2/24
+    static routers=192.168.0.1
+    static domain_name_servers=192.168.0.1
+
+    interface wlan0
+
+    static ip_address=192.168.0.2/24
+    static routers=192.168.0.1
+    static domain_name_servers=192.168.0.1
+    ```
+
+2. Reboot the pi via `sudo reboot now`

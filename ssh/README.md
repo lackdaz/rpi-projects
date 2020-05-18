@@ -56,3 +56,7 @@ For Troubleshooting help:
 3. Run any graphical UI like:
 
       `idle &`
+
+### Password-less SSH login
+1. First generate a rsa key via `ssh-keygen`
+2. Then copy your key to your remote pi via `ssh-copy-id pi@<replace-with-static-ip-address>`, key in your remote pi user's password and voila!
